@@ -16990,3 +16990,5 @@
 127.0.0.1 - - [20/Feb/2023:09:50:39 +0800] "GET /css/login.css HTTP/1.1" 200 1285 "http://localhost:8080/login.html" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36"
 127.0.0.1 - - [20/Feb/2023:09:50:39 +0800] "GET /js/axios.min.map HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 127.0.0.1 - - [20/Feb/2023:09:50:39 +0800] "GET /favicon.ico HTTP/1.1" 200 6343 "http://localhost:8080/login.html" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36"
+127.0.0.1 - - [20/Feb/2023:09:59:30 +0800] "GET /login.html HTTP/1.1" 304 0 "http://localhost:8080/info.html" "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Mobile Safari/537.36"
+127.0.0.1 - - [20/Feb/2023:09:59:31 +0800] "GET /js/axios.min.map HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
