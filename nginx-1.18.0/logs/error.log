@@ -3522,3 +3522,8 @@
 2023/02/20 09:50:52 [notice] 12760#12308: signal process started
 2023/02/20 09:59:31 [error] 3704#3328: *1 CreateFile() "E:\git Repositories\Hm-Dianping\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
 2023/02/20 10:02:03 [notice] 5084#17180: signal process started
+2023/02/20 10:29:54 [error] 3408#2712: *1 CreateFile() "E:\git Repositories\Hm-Dianping\nginx-1.18.0/html/hmdp/js/axios.min.map" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /js/axios.min.map HTTP/1.1", host: "localhost:8080"
+2023/02/20 10:30:05 [notice] 16096#10348: signal process started
+2023/02/20 10:31:04 [notice] 5988#12580: signal process started
+2023/02/20 10:31:24 [notice] 15568#6052: signal process started
+2023/02/20 10:31:55 [notice] 12536#5616: signal process started
