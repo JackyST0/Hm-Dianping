@@ -147,7 +147,6 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
                 } catch (Exception e) {
                     log.error("处理订单异常",e);
                 }
-
             }
         }
     }*/
@@ -194,7 +193,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             return Result.fail(r == 1 ? "库存不足" : "不能重复下单");
         }
 
-        // 3.获取代理对象（事务）
+        // 3.获取代理对象（事务想要生效，还得利用代理来生效）
         proxy = (IVoucherOrderService) AopContext.currentProxy();
 
         // 4.返回订单id
@@ -229,7 +228,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
         // 2.6.放入阻塞队列
         orderTasks.add(voucherOrder);
 
-        // 3.获取代理对象（事务）
+        // 3.获取代理对象（事务想要生效，还得利用代理来生效）
         proxy = (IVoucherOrderService) AopContext.currentProxy();
 
         // 4.返回订单id
@@ -297,7 +296,7 @@ public class VoucherOrderServiceImpl extends ServiceImpl<VoucherOrderMapper, Vou
             return Result.fail("不允许重复下单");
         }
         try {
-            // 获取代理对象（事务）
+            // 获取代理对象（事务想要生效，还得利用代理来生效）
             IVoucherOrderService proxy = (IVoucherOrderService) AopContext.currentProxy();
             return proxy.createVoucherOrder(voucherId);
         } finally {

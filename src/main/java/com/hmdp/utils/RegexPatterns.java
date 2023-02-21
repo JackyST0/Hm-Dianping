@@ -17,5 +17,4 @@ public abstract class RegexPatterns {
      * 验证码正则, 6位数字或字母
      */
     public static final String VERIFY_CODE_REGEX = "^[a-zA-Z\\d]{6}$";
-
 }

@@ -1,3 +1,4 @@
+-- seckill.lua-秒杀优化Lua脚本
 -- 1.参数列表
 -- 1.1.优惠券id
 local voucherId = ARGV[1]

@@ -1,4 +1,5 @@
--- 比较线程标示与锁中的标示是否一致
+-- unlock.lua-释放锁Lua脚本
+-- 比较线程标识与锁中的标识是否一致
 if(redis.call('get',KEYS[1]) == ARGV[1]) then
     -- 释放锁 del key
     return redis.call('del',KEYS[1])

@@ -16,7 +16,7 @@ import java.time.format.DateTimeFormatter;
 @Component
 public class RedisIdWorker {
     /**
-     * 开始时间戳
+     * 开始时间戳，这里设定的是2022.01.01 00:00:00
      */
     private static final long BEGIN_TIMESTAMP = 1640995200L;
 

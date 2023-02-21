@@ -102,7 +102,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
             // 3.如果未点赞，可以点赞
             // 3.1.数据库点赞数 + 1
             boolean isSuccess = update().setSql("liked = liked + 1").eq("id", id).update();
-            // 3.2.保存用户到Redis的Set集合 zadd key value score
+            // 3.2.保存用户到Redis的ZSet集合 zadd key value score
             if (isSuccess){
                 stringRedisTemplate.opsForZSet().add(key,userId.toString(),System.currentTimeMillis());
             }
@@ -110,7 +110,7 @@ public class BlogServiceImpl extends ServiceImpl<BlogMapper, Blog> implements IB
             // 4.如果已点赞，取消点赞
             // 4.1.数据库点赞数 - 1
             boolean isSuccess = update().setSql("liked = liked - 1").eq("id", id).update();
-            // 4.2.把用户从Redis的Set集合移除
+            // 4.2.把用户从Redis的ZSet集合移除
             if (isSuccess){
                 stringRedisTemplate.opsForZSet().remove(key,userId.toString());
             }

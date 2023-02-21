@@ -40,9 +40,10 @@ public class SimpleRedisLock implements ILock{
         // 获取线程标识
         String threadId = ID_PREFIX + Thread.currentThread().getId();
 
-        // 获取锁
+        // 获取锁，使用SETNX方法进行加锁，同时设置过期时间，防止死锁
         Boolean success = stringRedisTemplate.opsForValue()
                 .setIfAbsent(KEY_PREFIX + name, threadId + "", timeoutSec, TimeUnit.SECONDS);
+        //自动拆箱可能会出现null，这样写更稳妥
         return Boolean.TRUE.equals(success);
     }
 
